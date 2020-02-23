@@ -84,7 +84,7 @@ https://platzi.com/tutoriales/1566-bd/4120-las-12-1-leyes-de-codd/
 
 **Ejemplo:**
 
-![](img\entidades-atributos.jpg)
+![](/img/diagrama1.jpg)
 
 
 
@@ -108,7 +108,7 @@ La cardinalidad es utilizada para saber cuantas entidades se relacionan con otra
 
 * Un **[usuario**] *< tiene >* un **[dato_contacto]**
 
-![](img\relacion_uno_uno.jpg)
+![](img/relacion_uno_uno.jpg)
 
 
 
@@ -116,7 +116,7 @@ La cardinalidad es utilizada para saber cuantas entidades se relacionan con otra
 
 * La **[sesión]** *< tiene o no>* un **[usuario]**
 
-![](img\relacion_cero_uno.jpg)
+![](img/relacion_cero_uno.jpg)
 
 
 
@@ -124,7 +124,7 @@ La cardinalidad es utilizada para saber cuantas entidades se relacionan con otra
 
 * Un **[usuario**] *< tiene >* varios **[vehículos]**
 
-![](img\relacion_uno_n.jpg)
+![](img/relacion_uno_n.jpg)
 
 
 
@@ -132,7 +132,7 @@ La cardinalidad es utilizada para saber cuantas entidades se relacionan con otra
 
 * Un **[paciente]** *< tiene o no >* varias **[habitaciones]**
 
-![](img\relacion_cero_n.jpg)
+![](img/relacion_cero_n.jpg)
 
 
 
@@ -140,7 +140,7 @@ La cardinalidad es utilizada para saber cuantas entidades se relacionan con otra
 
 * Varios **[alumno]** *< tienen >* varias **[clases]**
 
-![](img\relacion_n_n.jpg)
+![](img/relacion_n_n.jpg)
 
 
 
@@ -148,7 +148,7 @@ La cardinalidad es utilizada para saber cuantas entidades se relacionan con otra
 
 Los diagramas son una especie de mapa utilizado antes de conformar un proyecto. 
 
-![](img\diagrama_blog.jpg)
+![](img/diagrama_blog.jpg)
 
 Un **[usuario]** *< escribe >* varios **[posts]**
 
@@ -212,35 +212,35 @@ Ayuda a establecer en forma normal todo, es el punto perfecto de una base de dat
 
 **Sin normalizar**
 
-![](img\sin_normalizar.jpg)
+![](img/sin_normalizar.jpg)
 
 
 
 **Normalizada con campos sin repetir (Atomizar)**: No se debe repetir ningún campo.
 
-![](\img\normalizadaf1.jpg)
+![](img/normalizadaf1.jpg)
 
 
 
 **Normalizada con clave única**: No se debe repetir ningún campo y además se depende de una clave única.
 
-![](\img\normalizadaf2.jpg)
+![](img/normalizadaf2.jpg)
 
 **Normalizada con dependencia clave:** Se cumplen las dos condiciones anteriores y los campos que NO son clave NO deben tener dependencias.
 
-![](img\normalizadaf3.jpg)
+![](img/normalizadaf3.jpg)
 
 
 
 **Normalizar con campos multi valuados de clave única:** Se cumplen las condiciones anteriores y los campos multi valuados poseen una clave única.
 
-![](\img\normalizadaf4.jpg)
+![](img/normalizadaf4.jpg)
 
 
 
 ### Diagrama Normalizado para el proyecto
 
-![](\img\diagrama1.jpg)
+![](img/diagrama1.jpg)
 
 En **post** añadimos la clave única de **usuarios** como una clave foranea en este caso **usuarios_id**. En comentarios ocurre lo mismo.
 
@@ -250,6 +250,6 @@ Sucede lo mismo en **comentarios** con el atributo **posts_id**, este posee much
 
 **Entre posts y etiquetas sucede algo especial...**
 
-![](\img\diagrama2.jpg)
+![](img/diagrama2.jpg)
 
 Al tener una relación N:N no se sabe a que entidad otorgar la llave foranea, lo que se debe hacer en estos casos es agregar una tabla intermedia (pivote), esto permite ver la relación entre ambas entidades, esta posee las llaves foraneas de ambas entidades. Como alternativa se puede generar una llave denominada post_etiqueta_id para evitar generar otra tabla.
